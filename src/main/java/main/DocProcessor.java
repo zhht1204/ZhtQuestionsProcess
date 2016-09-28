@@ -116,4 +116,50 @@ public class DocProcessor {
 
 		return resultList;
 	}
+
+	public void formatListToSv(List list, File outputFile, String separator) {
+		FileWriter fw;
+		BufferedWriter bw;
+		try {
+			fw = new FileWriter(outputFile);
+			bw = new BufferedWriter(fw);
+			for (Object o : list) {
+				if (o instanceof SelectQuestionsEntity) {
+					bw.write(((SelectQuestionsEntity) o).getId() + "");
+					bw.write(separator);
+					bw.write(((SelectQuestionsEntity) o).getQuestion());
+					bw.write(separator);
+					bw.write(((SelectQuestionsEntity) o).getSelections());
+					bw.write(separator);
+					bw.write(((SelectQuestionsEntity) o).getAnswer());
+					bw.write(separator);
+					bw.write(((SelectQuestionsEntity) o).getType() + "");
+				} else if (o instanceof JudgeQuestionsEntity) {
+					bw.write(((JudgeQuestionsEntity) o).getId() + "");
+					bw.write(separator);
+					bw.write(((JudgeQuestionsEntity) o).getQuestion());
+					bw.write(separator);
+					bw.write(((JudgeQuestionsEntity) o).getAnswer() + "");
+				} else {
+					logger.error("entity certification error");
+				}
+				bw.newLine();
+			}
+			bw.close();
+		} catch (IOException e) {
+			logger.error(e.getMessage());
+		}
+	}
+
+	public void formatListToSv(List list, String separator) {
+		formatListToSv(list, new File("output_files/output.txt"), separator);
+	}
+
+	public void formatListToSv(List list, File outputFile) {
+		formatListToSv(list, outputFile, "\t");
+	}
+
+	public void formatListToSv(List list) {
+		formatListToSv(list, new File("output_files/output.txt"), "\t");
+	}
 }
