@@ -2,9 +2,6 @@ package bean;
 
 import javax.persistence.*;
 
-/**
- * Created by Administrator on 2016/9/28.
- */
 @Entity
 @Table(name = "select_questions", schema = "java_sanji", catalog = "")
 public class SelectQuestionsEntity {
@@ -102,5 +99,12 @@ public class SelectQuestionsEntity {
 		result = 31 * result + (answer != null ? answer.hashCode() : 0);
 		result = 31 * result + (type != null ? type.hashCode() : 0);
 		return result;
+	}
+
+	@Override
+	public String toString() {
+		return "[SelectQuestionEntity: id=" + this.id + ";question=" + this.question + ";selections="
+				+ this.selections + "" + ";answer=" + this.answer + ";type=" + (this.type == 0 ? "单选题" : "多选题")
+				+ "]";
 	}
 }

@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 import test.AbstractTest;
 
-import static org.junit.Assert.*;
+import java.util.List;
 
 public class JudgeQuestionDaoImplTest extends AbstractTest {
 	private JudgeQuestionDaoImpl dao;
@@ -23,6 +23,14 @@ public class JudgeQuestionDaoImplTest extends AbstractTest {
 		question.setQuestion("test question");
 		question.setAnswer("A");
 		dao.save(question);
+	}
+
+	@Test
+	public void list() {
+		List<JudgeQuestionsEntity> list = dao.list();
+		for (JudgeQuestionsEntity e : list) {
+			logger.info(e.toString());
+		}
 	}
 
 }

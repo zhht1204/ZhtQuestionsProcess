@@ -8,12 +8,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class DbUtil {
-	static Logger logger = LoggerFactory.getLogger(DbUtil.class);
 	private static final SessionFactory sessionFactory;
+	static Logger logger = LoggerFactory.getLogger(DbUtil.class);
 
 	static {
 		sessionFactory = new Configuration().
-				configure("lib/hibernate.cfg.xml").
+				configure("hibernate.cfg.xml").
 				buildSessionFactory();
 	}
 

@@ -1,0 +1,712 @@
+1．下面关于ajax的工作原理描述是错误的是（D）
+A．相当于在用户和服务器之间加了一个中间层，使用户操作与服务器响应异步化。
+B．把一些服务器负担的工作转嫁到客户端，利用客户端闲置的处理能力来处理。
+C．所有的用户请求都提交给服务器
+D．所有数据由Ajax引擎代为向服务器提交请求
+2．下面关于使用ajax的理由说法错误的是（D）
+A．跨平台，跨浏览器
+B．基于公开标准
+C．以用户体验和可用性为主
+D．服务端技术的确定性
+3．下面关于ajax中http就绪状态描述错误的是（D）
+A．0：请求没有发出（在调用open()之前）
+B．1：请求已经建立但还没有发出（调用send()之前）
+C．2：请求已经发出正在处理之中（这里通常可以从响应得到内容头部）
+D．3：响应已完成，可以访问服务器响应并使用它
+4．下面关于ajax的构成描述正确的是（D）
+A．ajax就是asp+java+xml
+B．ajax就是applet+jsp+xmlt
+C．ajax就是applet+java+htmlt
+D．ajax就是javascript+xml+dom+dhtml
+5．以下对请求头方法的功能说明错误的是（B）
+A．getCookies方法会返回Cookie头的内容，解析后会存放在Cookie对象的数组中。
+B．getHeaderNames方法返回当前请求的所有头的名称的字符串对象
+C．getMethod方法返回请求方法，通常是GET或者POST。
+D．getProtocol返回HTTP版本号
+6．下面关于XmlHttpRequest对象的方法描述错误的是（D）
+A．open()：建立到服务器的新请求
+B．send()：向服务器发送请求
+C．readyState：提供当前 HTML 的就绪状态
+D．abort()：服务器返回的请求响应文本
+7．下面关于servlet生命周期说法错误的是（A）
+A．servlet在整个生命周期中只执行一次service方法
+B．在Servlet的生命周期中，仅执行一次init方法，是在服务器装入Servlet时执行的。
+C．缺省的服务功能是调用与Http请求方法相应的do功能
+D．缺省的init()方法设置了Servlet的初始化参数，并用它的ServletConfig对象参数来启动配置。
+8．关于Servlet说法错误的是（B）
+A．servlet用于构建动态网页
+B．用户编写servlet必须显示的定义一个构造方法
+C．servlet用于处理业务逻辑
+D．servlet可以根据用户不动的请求做出不动的响应
+9．关于Servlet说法正确的是（C）
+A．自己编写的servlet必须实现servlet接口
+B．dopost()方法和doget()方法必须同时存在
+C．servlet的工作方式基于请求/响应
+D．servlet的init()方法每当servlet调用时都执行一次
+10．jsp的特点有哪些描述是错误的（C）
+A．平台无关性
+B．经编译后是一个servlet
+C．不采用多线程
+D．可以嵌入java代码
+11．关于jsp描述错误的是（A）
+A．不依赖可以重用的组件来执行应用程序
+B．java语言实现，可以跨平台。
+C．与servlet一样，采用多线程。
+D．将内容显示与生成相分离
+12．关于jsp描述正确的是（A）
+A．page：在这个范围内定义的对象只与当前页面相关
+B．request：在这个范围内定义的对象只与在同一个请求间的页面相关
+C．application：会话范围允许你创建并且将对象绑定到一个会话上面
+D．session：绑定在会话范围的对象在不需要的时候要显示的删除
+13．关于jsp的说法正确的是（C）
+A．jsp中具有三种作用范围分别是page，session，request
+B．jsp：param只能在jsp:forward中使用
+C．使用include指令来包含一个文件，该文件只能是jsp文件
+D．jsp:useBean用来在页面中创建一个Bean实例并指定它的名字和作用范围
+14．关于jsp的说法错误的是（A）
+A．JSP内部对象需要由JSP的编写者实例化
+B．<jsp:include>包含的内容可以是动态改变的，它在执行时才确定，而前者<%@ include %>指令包含的内容是固定不变的。
+C．<jsp:forward>这个动作允许请求被转发到另外的JSP、servlet或一个静态的资源上。
+D．表达式就是位于<% =和%>之间的代码
+15．从HTTP请求中，获得请求参数，应该调用哪个方法（C）
+A．调用HttpServletRequest对象的getAttribute()方法
+B．调用ServletContext对象的getAttribute()方法
+C．调用HttpServletRequest对象的getParameter()方法
+D．调用HttpServletRequest对象的setAttribute()方法
+16．关于spring框架描述错误的是（C）
+A．Spring是一个开源框架，它是为了解决企业应用开发的复杂性而创建的。
+B．使用基本的JavaBean代替EJB，并提供了更多的企业应用功能。
+C．spring应用中的对象依赖于Spring的特定类
+D．Spring包含并管理应用对象的配置和生命周期
+17．关于struts框架描述错误的是（C）
+A．Struts是MVC的一种实现，它将Servlet和JSP标记（属于J2EE规范）用作实现的一部分。
+B．在Struts中，承担MVC中Controller角色的是一个Servlet。
+C．在Struts中，用户的请求必须以*.do作为请求服务名。
+D．Struts的核心是ActionSevlet，ActionSevlet的核心是Struts-config.xml。
+18．关于hibernate框架描述不正确的是（A）
+A．不基于jdbc
+B．提供了强壮的结构映射关系
+C．大大减轻了日常的数据持久化编程任务
+D．提供强大的事务处理机制
+19．关于struts2的描述错误的是（D）
+A．Struts-config.xml集中了所有页面的导航定义
+B．ActionServlet是struts框架MVC实现的controller部分，它是这一框架的核心。
+C．Action类是业务逻辑的一个包装。Action类的用途是将HttpServletRequest 转换为业务逻辑。
+D．每个子应用对应一个单独的web.xml文件
+20．关于struts2的描述正确的是（D）
+A．ActionMapping帮助控制器将请求映射到操作
+B．ActionForward用来指示操作转移的对象
+C．ActionError用来存储和回收错误
+D．Action是控制器
+21．关于struts2体系结构的描述错误的是（D）
+A．从视图角度（View），struts自身包含了一组可扩展的自定义标签库（TagLib），可以简化创建用户界面的过程。
+B．ActoinServlet必须在Web Application配置文件（web.xml）中描述
+C．在Struts2 framework中，Controller主要是ActionServlet。
+D．ActionServlet继承不是来自javax.servlet.http.HttpServlet类
+22．关于ActionServlet的描述错误的是（B）
+A．截获用户的Http请求
+B．把这个请求映射到相应的Action类
+C．调用Action实例的perform()方法
+D．perform返回一个ActionForm对象，根据方法执行情况转到相应的jsp页面。
+23．有关Struts Action Mapping的配置描述错误的是（B）
+A．form-bean
+B．action-forwards
+C．action-mappings
+D．data-sources
+24．关于ActionError的描述错误的是（D）
+A．ActionError类定义了一组重载的构造器来创建错误信息
+B．ActionError类从不独立进行错误处理，它们总是被存储在ActionErrors对象中。
+C．ActionErrors的size()返回错误的数目
+D．ActionErrors的empty()清除所有的错误
+25．关于mvc模式的说法错误的是（D）
+A．Struts是MVC的一种实现，它将Servlet和JSP标记（属于J2EE规范）用作实现的一部分。
+B．MVC即Model-View-的缩写，是一种常用的设计模式。
+C．Controller——控制整个framework中各个组件的协调工作
+D．view——用于处理业务逻辑
+26．一般来说，在多个并发线程正在执行的时候，如果有一个新的请求到来，Servlet容器将构造Servlet的一个实例，为每个用户请求建立一个新进程，这意味着，多个线程可能同时访问一些共享数据。如果要阻止这种多线程的访问，可以使Servlet实现哪个接口？（C）
+A．NewThreadModel接口
+B．NewServlet接口
+C．SingleThreadModel 接口
+D．SingleServlet接口
+27．以下哪种情况可能不会初始化servlet？（D）
+A．服务器down机后，重新装入servlet时。
+B．已经配置了自动装入选项，在启动服务器时自动装入servlet。
+C．没有配置自动装入选项，在服务器启动后，客户端首次向Servlet发出请求时。
+D．新客户端向Servlet发出请求时
+28．以下关于XML描述错误的是（C）
+A．主要用来存储和发送数据信息，以便各种基于WEB的应用之间能更方便的交换数据。
+B．XML也是一种基于文本的标记语言
+C．内容描述与显示方式整合为一体
+D．编辑、浏览工具尚不成熟
+29．以下关于XML特点描述正确的是（C）
+A．简洁有效 
+B．易学易用
+C．不可扩充
+D．开放的国际化标准
+30．以下关于XML描述错误的是（D）
+A．XML可以用来描述数据，重点是“数据是什么”。
+B．XML的标记不是在XML中预定义的，你必须定义自己的标记。
+C．XML使用文档类型定义（DTD）或者模式（Schema）来描述数据
+D．XML不能跨平台
+31．XML 文档中的处理指令可以使用以下哪一项来标识？（C）
+A．<P> 和 <P> 定界符
+B．<XML> 和 </XML> 定界符
+C．<? 和 ?> 定界符
+D．以上都不是
+32．____________ 用来避免指定诸如引号、"<" 、">"符号等之类的值作为生的冲突。（A）
+A．实体引用
+B．XML 实体
+C．命名空间
+D．XSL
+33．要把 HTML 代码界定在 XML 标记中。以下哪一项是用于该目的的？（A）
+A．CDATA
+B．实体引用
+C．XML处理指令
+D．以上都不是
+34．以下关于XML基本语法描述正确的是（B）
+A．元素不区分大小写
+B．元素可以嵌套，可以重叠
+C．属性取值必须要加引号
+D．可以以字母串“xml”开头
+35．以下关于XML基本语法描述错误的是（A）
+A．不严格要求标记配对
+B．不能以数字开头
+C．不能包含空格
+D．不可以以字母串“xml”开头
+36．以下关于XML基本语法描述错误的是（B）
+A．可以包含斜杠“/”
+B．可以冒号开头，
+C．属性必须有值
+D．字符串不能包含“<”
+37．关于spring的描述错误的是（D）
+A．Spring是一个开源框架，它是为了解决企业应用开发的复杂性而创建的。
+B．Spring使用基本的JavaBean来完成以前只可能由EJB完成的事情
+C．Spring将使用接口的复杂度降低到零
+D．Spring应用中的对象依赖于Spring的特定类
+38．Spring框架由以下哪些模块组成，错误的是（C）
+A．核心容器
+B．应用上下文（Context）模块
+C．Spring的IOC模块
+D．JDBC抽象和DAO模块
+39．以下哪个方法不是Servlet的生命周期接口定义的？（D）
+A．init()
+B．service()
+C．destroy()
+D．create()
+40．关于Spring IoC容器的使用正确的是（D）
+A．一个bean至少需要一个id（或者是name）属性和一个class属性（attribute）
+B．<ref>指定依赖关系时，bean：从同一个XML中或另一个已经导入到ApplicationContext中的XML文件查找所依赖的。
+C．一个bean的依赖关系是指这个进行操作时所依赖的一种属性
+D．依赖指向了一个简单的数值
+41．关于Spring IoC容器的使用错误的是（D）
+A．由容器控制程序之间的（依赖）关系，而非传统实现中，由程序代码直接操控。
+B．促进了松耦合
+C．增加了组件之间的依赖关系，同时也大大提高了组件的可移植性。
+D．依赖注入分为接口注入，设置方法注入两种实现形式。
+42．下述Servlet的处理流程中表述不正确的步骤是（B）
+A．客户端发送一个请求至服务器端；服务器将请求信息发给Servlet。
+B．Servlet引擎，也就是ejb容器会调用Servlet的service方法。
+C．Servlet构建一个响应，并将其传给服务器。这个响应是动态构建的，相应的内容通常取决于客户端的请求，这个过程中也可以使用外部资源。
+D．服务器将响应返回给客户端。
+43．关于spring整合hibernate说法正确的是（D）
+A．Hibernate中的模版回调机制包含一个HibernateTemplate和一个回调接口
+B．spring管理Hibernate的资源
+C．Dao类继承HibernateDaoSupport类后，可以使用getHibernateTemplate(),getSession()
+D．HibernateTemplate不可以公用多个DAO
+44．Customer类中有一个Set类型的orders属性，用来存放Order订单对象，在Customer.hbm.xml文件中，用哪个元素映射orders属性？（C）
+A．<set>
+B．<one-to-many>
+C．<many-to-one>
+D．<property>
+45．在hibernaet中实体关系映射描述错误的是（D）
+A．一对一
+B．一对多
+C．多对多包括单向多对多和双向多对多
+D．单向多对多与双向多对多没有任何区别
+46．一般情况下，关系数据模型与对象模型之间有哪些匹配关系（ABCD）（这是个多选题）
+A．对应类与表
+B．记录对应对象
+C．表的字段对应类的属性
+D．表之间的参考关系对应类之间的依赖关系
+47．事务隔离级别是由谁实现的？（D）(百度一下)
+A．Java应用程序 
+B．Hibernate
+C．数据库系统 
+D．JDBC驱动程序
+48．对Session中的方法描述错误的是？（D）
+A．在同一Session中更新 --- save() 方法
+B．更新从session脱离的对象--- update()方法
+C．saveOrUpdate()方法同时包含了save() 和 update() 两个功能
+D．saveOrUpdate()方法中如果传入的对象是游离对象，就调用save()方法
+49．以下哪些不属于Session的方法？ （D）
+A．close()
+B．save()
+C．delete()
+D．connection ()
+50．对Session中的方法描述错误的是？ （D）
+A．session的save()方法把一个临时对象转变为持久话对象
+B．session的load(),get()方法返回的对象总是处于持久化状态
+C．session的save(),find()方法返回的list集合中存放的都是持久话对象
+D．session在清理缓存时，不会根据持久化对象的属性变化来同步更新数据库。
+51．对关于hibernate描述正确的是？（D）
+A．大大减轻了日常的数据持久化编程任务
+B．提供了强壮的结构映射关系
+C．提供强大的事务处理机制
+D．不可仪在使用jdbc的场合使用
+52．关于HQL与SQL，以下哪些说法正确？（B）
+A．HQL与SQL没什么差别
+B．HQL面向对象，而SQL操纵关系数据库。
+C．在HQL与SQL中，都包含select,insert,update,delete语句。
+D．HQL仅用于查询数据，不支持insert,update和delete语句。
+53．在java中，可以使线程恢复运行的方法是哪个。（D）
+A．init();
+B．start();
+C．run();
+D．resume();
+54．在Java语言中，类Student是类Person的子类，Student的构造方法中有一句"super()"，该语句表达了什么概念？（选择1项）（C）
+A．调用类Worker中定义的super()方法
+B．调用类Person中定义的super()方法
+C．调用类Person的构造方法
+D．语法错误
+55．现在需要建立自制类MyClass，同时需要将此类放入自制包MyPackage，正确的声明方法为？（选择1项）（C）
+A．public class MyPackage.MyClass{}
+B．public class MyClass in MyPackage{}
+C．package MyPackage; public class MyClass{}
+D．public package MyPackage; classMyClass{}
+56．关于struts标签的用法说法正确的是（C）
+A．用于定义新bean、访问bean及其属性的标记
+B．<bean:define>用于将源bean在页作用域中被拷贝到请求作用域中的另一个bean
+C．<logic:equal>如果常数与被定义的实体相等，返回true
+D．<logic;greaterEqual>如果常数小于等于被定义的实体，返回true
+57．关于struts2标签的用法说法错误的是（B）
+A．<logic:forward>标记能够将响应转发给重定向到特定的全局ActionForward上
+B．<logic;greaterEqual>如果常数小于等于被定义的实体，返回true
+C．<bean:define>用于将源bean在页作用域中被拷贝到请求作用域中的另一个bean
+D．struts-html taglib：包含用来生成动态HTML用户界面和窗体的tag
+58．关于struts国际化描述错误的是（C）
+A．struts框架对国际化的支持是只须使用<bean:message>标记
+B．用strtus实现国际化和本地化，第一步要定义资源文件的名称。
+C．所有的资源文件可以不都存储在基本资源文件所在的目录中
+D．运行一个国际化的web站点，它可以根据用户计算机上的设置的区域自动以相应的语言显示。
+59．有关类的说法正确的是？（B）
+A．类具有封装性，所以类的数据是不能被访问的。
+B．类具有封装性，但可以通过类的公共接口访问类中的数据。
+C．声明一个类时，必须用public修饰符。
+D．每个类中，必须有main方法，否则程序无法运行。
+60．为了区分重载多态中同名的不同方法，要求（A）。
+A．采用不同的参数列表
+B．返回值类型不同
+C．调用时用类名或对象名做前缀
+D．参数名不同
+61．Hashtable实现以下哪个接口？（A）
+A．java.util.Map 
+B．java.util.List 
+C．java.util.Hashable 
+D．java.util.Collection 
+62．下面关于集合的说法正确的是？（B）
+A．List接口继承了Collection 接口以定义一个不允许重复项的有序集合
+B．ArrayList和LinkedList是List接口的实现类
+C．要支持随机访问，选择LinkedList类较好，而顺序的访问列表元素使用ArrayList类更好。
+D．Set接口继承Collection接口，而且它允许集合中存在重复项。
+63．下面关于ArrayList的说法正确的是？（B）
+A．ArrayList()可以构造一个初始容量为5 的空列表
+B．ArrayList初始化时用户可以自定义ArrayList对象的初始容量
+C．ArrayList对象中只能存放同一数据类型的数据
+D．ArrayList对象中不能存放NULL
+64．哪种方式能将新的内容追加到一个文本文件 “file.txt”? （C）
+A．OutputStream out=newFileOutputStream(“file.txt”); 
+B．OutputStream out=newFileOutputStream(“file.txt”, “append”); 
+C．FileOutputStreamout = new FileOutputStream(“file.txt”,true);
+D．FileOutputStrea out=newFileOutputStream(new file(“file.txt”));
+65．在读字符文件Employee.dat时，使用该文件作为参数的类是（D）
+A．BufferReader
+B．DataInputStream 
+C．DataOutoutStream 
+D．FileInputStream 
+66．下列哪个选项不是FilterInputStream的子类？（D）
+A．CheckedInputStream
+B．BufferedInputStream
+C．PushbackInputStream
+D．FileInputStream
+67．在JAVA语言网络编程中，URL类是在java.net包中，该类中提供了许多方法用来访问URL对象的各种资源，下列哪个用来获取URL中的端口号。（D）
+A．getFile()
+B．getProtocol()
+C．getHost()
+D．getPort()
+68．要使用Java语言开发socket程序，需要使用（ ）包。（输入输出处理网络编程） （A）
+A．java.net
+B．java.io
+C．java.awt
+D．java.util
+69．JAVA语言中的套接字（Socket）是一种基于网络进程通信的接口，是网络通信协议的一种应用。它有两个主要类，下列哪个在Application应用程序中实现客户端的通信功能。（输入输出处理网络编程）（C）
+A．ServerSocket类 
+B．URL类 
+C．Socket类 
+D．Client
+70．Thread类用来创建和控制线程，一个线程从下面（）方法开始执行。（java线程的概念）（B）
+A．init() 
+B．start() 
+C．run() 
+D．notifyAll()
+71．下列有关线程的叙述哪个是正确的？（java线程的概念）（B）
+A．一旦一个线程被创建，它就立即开始运行。
+B．调用start()方法可以使一个线程成为可运行的，但是它不一定立即开始运行。
+C．主线程不具有默认优先级
+D．Java中线程的优先级从低到高以整数0～9表示
+72．resume（）方法负责恢复被哪个方法挂起的线程？（java线程的概念）（D）
+　　A．stop（）
+　　B．sleep（）
+　　C．wait（）
+　　D．suspend（）
+73．关于JAVA中垃圾回收机制的说法正确的是？（垃圾回收机制的两种方法）（B）
+A．Java技术提供了一个轻量级的线程，即垃圾收集器线程，来跟踪每一块分配出去的内存空间。
+B．当JVM处于空闲时，垃圾收集器线程会自动检查每一块分配出去的内存空间。
+C．当程序运行结束后，所有创建的对象都会被自动清除出内存空间。
+D．垃圾收集线程在一个Java程序中的执行是自动的，也可以强制执行。
+74．关于JAVA中垃圾回收的说法正确的是？（垃圾回收机制的两种方法）（A）
+A．当没有对象引用指向原先分配给某个对象的内存时，该内存便成为垃圾。
+B．垃圾收集意味着程序不再需要的对象是"无用信息"，这些信息将被回收。
+C．JAVA中垃圾收集是自动完成的
+D．JAVA中垃圾收集的所有算法都能100%清除废弃内存
+75．下面哪个不属于垃圾回收算法？（垃圾回收机制的两种方法）（D）
+A．引用计数法
+B．tracing算法
+C．generation算法
+D．选择算法
+76．下面哪些是java语言中的关键字？（Java编码规范）（B）
+A．sizeof 
+B．abstract 
+C．NULL 
+D．Native
+77．下面语句哪个是正确的？（Java编码规范）（C）
+A．char='abc'; 
+B．byte b=128; 
+C．float f=0.23f; 
+D．double=0.7E-3;
+78．如下哪些字串是Java中的标识符？（Java编码规范）（A）
+A．fieldname
+B．super
+C．3number
+D．#number
+79．关于JAVA序列化与反序列化的说法正确的是？（Java序列化与反序列化的概念）（A）
+A．对象序列化是指将对象转换为字节序列的过程，而反序列化则是根据字节序列恢复对象的过程。
+B．任何类的对象都能被序列化
+C．对实现了Serializable接口的类，采用默认的反序列化方式。
+D．实现了Externalizable接口的类，采用默认的序列化方式。
+80．对于JAVA序列化作用的解释，不正确是？（Java序列化与反序列化的概念）（D）
+A．永久性保存对象，保存对象的字节序列到本地文件中。
+B．通过序列化对象在网络中传递对象
+C．通过序列化在进程间传递对象
+D．通过序列化能使JAVA程序顺序进行
+81．关于对象序列化的说法，正确的是？（java序列化和反序列化）（C）
+A．序列化就是将一个对象的状态和动作都保存起来，然后在适当的时候再获得。
+B．如果某个类能够被序列化，而其子不一定能被序列化。
+C．声明为static和transient类型的成员数据不能被序列化
+D．对象序列化不能实现分布式对象
+82．关于内部类的叙述不正确的是？（Java内部类的概念）（D）
+A．一个内部类的对象能够访问创建它的外部类对象的所有属性及方法
+B．对于同一个包中的其它类来说，内部类可以用private修饰，将自己隐藏起来。
+C．内部类可定义在方法中,称为局部内部类，但它只能使用方法中的final常量。
+D．内部类不能被abstract修饰
+83．关于内部类的说法正确的是？（Java内部类的概念）（A）
+A．定义在一个类内部的类叫内部类
+B．不包含内部类的类称为外部类
+C．内部类只能声明public访问限制
+D．内部类不能访问外部类的所有方法与属性
+84．关于内部类的解释不正确的是？（Java内部类的概念）（D）
+A．内部类只能被它的外部类，不能再被其他的类使用。
+B．内部类可以将一些非面向对象的语句块对象化
+C．使用内部类，可以使得代码更加灵活和富有扩展性。
+D．内部类的好处很多，我们应该在任何时候都要使用内部类。
+85．以下那种类型的对象哪个被throw抛出？（Java异常处理的概念）（D）
+A．collection 
+B．Event 
+C．Object 
+D．Exception
+86．哪个关键字可以抛出异常？（Java异常处理的概念） （C）
+A．transient 
+B．finally 
+C．throw 
+D．static
+87．在java的一个异常处理中，哪个语句块可以有多个？（Java异常处理的概念）（A）
+A．catch 
+B．finally 
+C．try 
+D．throws
+88．软件生命周期中所花费用最多的阶段是（软件开发的生命周期）（D）
+A．详细设计 
+B．软件编码 
+C．软件测试 
+D．软件维护 
+89．下列选项中不属于软件生命周期开发阶段任务的是。（软件开发的生命周期）（C）
+A．软件测试 
+B．概要设计 
+C．软件维护
+D．详细设计
+90．软件开发的结构化生命周期方法将软件生命周期划分成（软件开发的生命周期）。 （D）
+A．定义、开发、运行维护 
+B．设计阶段、编程阶段、测试阶段 
+C．总体设计、详细设计、编程调试 
+D．需求分析、功能定义、系统设计
+91．下列叙述不正确的是（软件开发的特点）（C）
+A．面向对象的技术已经在现在的软件开发中占据了主流的位置
+B．软件开发过程中的任何一个活动都是为了能够产出优秀的代码。所以，代码才是核心。
+C．软件的开发过程中如果有一个环节的发生变化变化，不一定会对其它的环节产生影响。
+D．目前软件开发慢慢想工程化发展
+92．对于面对对象的软件开发描述不正确的是（软件开发的特点）（C）
+A．对于面向对象来说，它最重要的改进就是把世间万物都描述为对象，符合人的正常思维。
+B．从程序员的角度看来，面向对象代码更侧重于对象之间的交互，多个对象各司其职，相互协作以完成目标。
+C．面对对象软件开发是以软件模块为单位来分配任务。
+D．面对对象的优势之一是能够提高代码的重用性，减少程序员的开发工作量。
+93．下列叙述中正确的是（软件工程的开发步骤）（D）
+A．软件测试应该由程序开发者来完成
+B．程序经调试后一般不需要再测试
+C．软件维护只包括对程序代码的维护
+D．以上三种说法都不对
+94．软件需求分析是保证软件质量的重要步骤，它的实施应该是在（软件工程的开发步骤）（C）
+A．编码阶段
+B．软件开发全过程
+C．软件定义阶段
+D．软件设计阶段
+95．在瀑布模型中，将软件划分为若干个时期，软件项目的可行性研究一般归属于（软件工程的开发步骤）。（B）
+A．维护时期　
+B．计划时期　
+C．运行时期　
+D．开发时期
+96．对于网络拓扑结构中的星型结构描述不正确的是（网络拓扑结构）（D）
+A．星形拓扑控制简单。
+B．星形拓扑故障诊断和隔离容易。
+C．星形拓扑方便服务。
+D．星形拓扑各站点的分布处理能力较强。
+97．对于JDBC的技术说法不正确的是（D）
+A．JDBC是一种用于执行SQL语句的java API
+B．JDBC可以为多种关系数据库提供统一的访问接口
+C．JDBC由一组用java语言编写的类与接口组成
+D．用户能够通过JDBC使用特定的SQL语言来存取数据库中的数据
+98．为MyClass类的一个无参数无返回值的方法method书写方法头，使得使用类名MyClass作为前缀就可以调用它，该方法头的形式为什么？（A）
+A．static voidmethod()
+B．public void method()
+C．final void method()
+D．abstract void method()
+99．为了使模块尽可能独立，要求（B）。 
+A．模块的内聚程度要尽量高，且各模块间的耦合程度要尽量强 
+B．模块的内聚程度要尽量高，且各模块间的耦合程度要尽量弱
+C．模块的内聚程度要尽量低，且各模块间的耦合程度要尽量弱 
+D．模块的内聚程度要尽量低，且各模块间的耦合程度要尽量强
+100．现在我们打算在java中进行强制垃圾收集以达到立刻减少资源占用的目的，我们应该怎么办？（选择1项）（A）
+A．java中做不到强制垃圾收集
+B．调用System.gc()方法
+C．调用Runtime.gc()方法
+D．将针对对象的引用设为null
+101．不允许作为类及类成员的访问控制符的是哪个项目？（选择1项）。（C）
+A．public
+B．private
+C．static
+D．protected
+102．设 x = 1 , y = 2 , z = 3，则表达式 y+=z--/++x-x 的值是？（选择1项）（B）
+A．0
+B．1
+C．2
+D．3
+103．设有四个线程，它们的优先级分别为如下四种之一。则那种级别的线程优先执行？（B）
+A．Thread.MIN_PRIORITY
+B．Thread.MAX_PRIORITY
+C．Thread.NORM_PRIORITY
+D．优先级别码为 7 级
+104．在Java语言中，下面关于构造函数的描述正确的是（）。（构造函数）（D）
+A．类必须有显式构造函数
+B．它的返回类型是void
+C．它和类有相同的名称，但它不能带任何参数
+D．以上皆非
+105．在Java语言中，类Worker是类Person的子类，Worker的构造方法中有一句" super() "，该语句（）。（"super"关键字）（C）/*与54重复*/
+A．调用类Worker中定义的super()方法
+B．调用类Person中定义的super()方法
+C．调用类Person的构造函数
+D．语法错误
+106．在多线程的同步通讯应用编程中，常常使用wait()来控制某一线程，但wait()方法应在如下何种方法中才可被调用（A）
+A．synchronized方法中
+B．public 成员方法中
+C．abstract 成员方法中
+D．static 成员方法中
+107．在Java语言中，小明在他的类SquareRoot中定义了方法method_A，其中包含语句: double my_result = Math.sqrt(1000); 他需要导入（）。（导入包和java.lang包）（A）
+A．Java.lang.*
+B．Java.Math.*
+C．Java.util.Math.*;
+D．以上皆非
+108．在Java语言中，小明在他的包mypackage中定义了类My_Class，在mypackage的子包mysubpackage中也有个类My_Class。小明用 import mypackage.*; 引入包，执行其中的语句: My_Class NewClass = newMy_Class(); 时，将发生（）。（包）（A）
+A．创建一个类mypackage.My_Class的对象
+B．创建一个类mypackage.mysubpackage.My_Class的对象
+C．该语句是错误的
+D．创建一个类mypackage.My_Class的对象和一个类mypackage.mysubpackage.My_Class的对象
+109．方法resume()可以恢复哪些线程的执行？（D）
+A．通过调用stop()方法而停止的线程
+B．通过调用sleep()方法而停止运行的线程 
+C．通过调用wait()方法而停止运行的线程 
+D．通过调用suspend()方法而停止运行的线程
+110．使用（）修饰符时，一个类能被同一包或不同包中的其他类访问。（JAVA修饰符）（C）
+A．private
+B．pretected
+C．public
+D．friendly
+111．访问修饰符限制性最高的是（）。（访问修饰符）（A）
+A．private
+B．protected
+C．public
+D．friendly
+112．下列关于对java中的异常的描述，哪一种是正确的？（C）
+A．java中的异常是指在编译过程中所产生的语法错误
+B．java中的异常是指用户编程时用错了Java的语句
+C．java中的异常是指Java程序在运行过程中所产生的运行错误
+D．java中的异常是指Java程序的类加载时的错误
+113．在Java中，要想使定义该类所在的包外的类不能访问这个类应用的关键字是（）。（修饰符）（A）
+A．不需要任何关键字
+B．private
+C．final
+D．protected
+114．欲扩充java中的异常类型以实现用户特定的应用环境下的异常处理，则用户程序（B）
+A．必须重写JDK中的Exception类
+B．必须继承JDK中的某一异常类，并重写自己的异常处理的成员方法。
+C．必须实现JDK中的Exception接口
+D．必须继承JDK中的Error类，并重写自己的异常处理的成员方法。
+115．在Java中，下面描述正确的是（）。（try块）（A）
+A．try块中可以有嵌套try块
+B．try块后最多可以跟随3个catch块
+C．try块可以单独存在
+116．软件开发周期中最简短的阶段是：（D）
+A．需求分析
+B．系统设计
+C．软件开发
+D．问题定义
+117．在J2EE中,要创建一个新目录，你可用如下（）类的实例。（和文件有关的类的方法）（A）
+A．File
+B．FileOutputStream
+C．PrintWriter
+D．BufferedReader
+118．下列哪些阶段不属于软件开发周期？（D）
+A．软件定义
+B．软件开发
+C．软件维护
+D．软件推销
+119．关于垃圾收集的哪些叙述是对的？（B）
+A．程序开发者必须自己创建一个线程进行内存释放的工作 
+B．垃圾收集将检查并释放不再使用的内存 
+C．垃圾收集允许程序开发者明确指定并立即释放该内存 
+D．垃圾收集能够在期望的时间释放被java对象使用的内存
+120．在J2EE中，对于ServletRequest接口的获取请求参数的方法的描述，正确的是（）。（获取请求参数的方法）（C）
+A．getParameter方法只用于接收POST请求参数，接收GET请求参数需要使用getQueryString方法
+B．如果一个参数key有多个值，那么getParameter(key)方法会返回空字符串
+C．如果一个参数key有多个值，那么getParameterValues(key)方法会返回一个包含所有值的字符串数组
+D．getParameter方法返回Object对象，使用前要强制类型转换：如String str=(String)request.getParameter(key)
+121．在J2EE中，对于我们自己设计的Bean，应该（）。（Bean）（D）
+A．一定要继承java.beans.Beans
+B．一定要实现Runnalbe接口
+C．一定要继承java.lang.Thread类
+D．可以不继承java.beans.Beans
+122．关于java的面向对象的编程特性中的封装机制，以下说法正确的是？（A）
+A．将问题的特征属性与问题的功能方法相组合在一起形成一个类
+B．将问题的特征属性与问题的功能方法相分离，形成各自的程序。
+C．将问题的特征属性内嵌到问题的功能方法的定义体中
+D．对具体问题只需给出其功能实现方法，而不必给出其特征属性的定义。
+123．下列关于面向对象的程序设计的说法中，不正确的是？（C）
+A．“对象”是现实世界的实体或概念在计算机逻辑中的抽象表示。
+B．在面向对象程序设计方法中，其程序结构是一个类的集合和各类之间以继承关系联系起来的结构。
+C．对象是面向对象技术的核心所在，在面向对象程序设计中，对象是类的抽象。
+D．面向对象程序设计的关键设计思想是让计算机逻辑来模拟现实世界的物理存在。
+124．下列那个是char类型的值的范围？（B）
+A．-27~27-1 
+B．0~216-1 
+C．0~216
+D．0~28
+125．下面哪些是短整型short的取值范围：（C）
+A．-27 ——27-1
+B．0 ——215
+C．–215 —— 215-1
+D．–231 ——231-1
+126．将一个十六进制数赋值给一个long类型的变量，正确的表达式是：（D）
+A．long number = 345L;
+B．long number =0345;
+C．long number =0345L;
+D．long number = 0x345L;
+127．下面的哪些赋值语句是错的？（A）
+A．float f = 11.1; 
+B．double d =5.3E12;
+C．double d =3.14159;
+D．double d =3.14D;
+128．以下哪一项对XML模式是不可能的？（C）
+A．我们可以限制元素的出现次数
+B．我们可以验证元素的数据类型
+C．我们可以检查元素是否是一个整数以及它是否可以被5 整除
+D．我们可以指定元素在文档中出现的顺序
+129．以下哪一项最适合用于将元素定义为一个复杂数据类型？（B）
+A．<order_ID>456</order_ID>
+B．<order_price>US.125</ order_price >
+C．<order_company>HLL</order_company>
+D．以上都不是
+130．SAX运行在以下哪一项上？（B）
+A．树节点接口
+B．事件驱动模型
+C．三层接口
+D．以上都不是
+131．以下哪一项耗用内存大？（B）
+A．SAX
+B．DOM
+C．SAX和DOM
+D．以上都不是
+132．___________ 把一个XML 文档中的信息转换成一棵节点树。（B）
+A．浏览器
+B．XML解析器
+C．样式表
+D．a 和b
+133．下列哪些不是Java的关键字？（C）
+A．goto
+B．null
+C．FALSE
+D．native
+E．const 
+134．在Java中，下列选项表示字符“a”值的是（）。（java中字符表示法）（A）
+A．'a'
+B．"a"
+C．newCharacter(A. 
+D．\000a
+135．“公司”与“IBM公司”的关系是？（D）
+A．继承关系
+B．包含关系
+C．关联关系
+D．以上都不是
+136．在Java中，调用一个对象的wait()方法后，（）。（线程同步的方法）（B）
+A．如果该对象的notify()方法已经被调用，则不会产生任何效果。
+B．在另外一个对象调用它的notify()或 notifyAll()方法之前该对象一直被挂起。
+C．将抛出一个异常。
+D．该对象的wait()方法与其他对象自动同步。
+137．java语言在语言的类型上应属于那种类型的语言（B）
+A．编译型的语言
+B．解释型的语言
+C．脚本型的解释语言
+D．编译链接型的语言
+138．哪里可以找到SAX解析器？（D）
+A．Java
+B．C++
+C．C
+D．以上都是
+139．Thread类的（）方法能够一个接一个地显示applet帧并在每一帧之间暂停一下。（线程的方法）（B）
+A．pause( )
+B．sleep( )
+C．stop( )
+D．start( )
+E．run( )
+140．在J2EE中,在自己定义的JavaBean中，有方法getComment()，返回字符串“hello!”，但是没有comment属性，当调用getComment()方法时会（）。（JavaBean的属性）（B）
+A．抛出异常
+B．返回字符串“hello!”
+C．什么也没有
+D．编译不能通过
+141．在J2EE中,下面对JSP指令的描述，正确的是（）。（JSP的指令）（A）
+A．指令以"<%@"开始，以"%>"结束
+B．指令以"<%"开始，以"%>"结束
+C．指令以"<"开始，以">"结束
+D．指令以"<jsp:"开始，以"/>"结束
+142．在J2EE中,以下的page指令设置了使用的脚本语言是Java，且导入了java.rmi.*和java.util.*包，正确的是（）。（JSP的page指令）（D）
+A．<%@page Language="Java",import="java.rmi.*;java.uitl.*" %>
+B．<%@page language="Java" Import="java.rmi.*,java.util.*" %>
+C．<%@page language="Java";import="java.rmi.*;java.util.*" %>
+D．<%@ page language="Java" import="java.rmi.*,java.util.*"%>
+

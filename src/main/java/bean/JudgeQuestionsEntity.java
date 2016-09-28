@@ -2,9 +2,7 @@ package bean;
 
 import javax.persistence.*;
 
-/**
- * Created by Administrator on 2016/9/28.
- */
+
 @Entity
 @Table(name = "judge_questions", schema = "java_sanji", catalog = "")
 public class JudgeQuestionsEntity {
@@ -72,5 +70,10 @@ public class JudgeQuestionsEntity {
 		result = 31 * result + (question != null ? question.hashCode() : 0);
 		result = 31 * result + (answer != null ? answer.hashCode() : 0);
 		return result;
+	}
+
+	@Override
+	public String toString() {
+		return "[JudgeQuestionEntity: id=" + this.id + ";question=" + this.question + ";answer=" + this.answer + "]";
 	}
 }

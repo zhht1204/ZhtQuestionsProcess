@@ -6,6 +6,8 @@ import org.junit.Before;
 import org.junit.Test;
 import test.AbstractTest;
 
+import java.util.List;
+
 public class SelectQuestionDaoImplTest extends AbstractTest {
 	SelectQuestionDaoImpl dao;
 
@@ -23,6 +25,14 @@ public class SelectQuestionDaoImplTest extends AbstractTest {
 		question.setAnswer("A");
 		question.setType((byte)0);
 		dao.save(question);
+	}
+
+	@Test
+	public void list() {
+		List<SelectQuestionsEntity> list = dao.list();
+		for (SelectQuestionsEntity e : list) {
+			logger.info(e.toString());
+		}
 	}
 
 }

@@ -7,6 +7,9 @@ import org.hibernate.Transaction;
 import utils.DbUtil;
 import utils.LoggerUtil;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SelectQuestionDaoImpl {
 	public void save(SelectQuestionsEntity question) {
 		Session session = DbUtil.getSession();
@@ -24,5 +27,18 @@ public class SelectQuestionDaoImpl {
 		} catch (Exception ex) {
 			LoggerUtil.getLogger().error(ex.getMessage());
 		}
+	}
+
+	public List<SelectQuestionsEntity> list() {
+		List<SelectQuestionsEntity> result = new ArrayList<SelectQuestionsEntity>();
+		Session session = DbUtil.getSession();
+		try {
+			String hql = "from SelectQuestionsEntity";
+			Query query = session.createQuery(hql);
+			result = query.list();
+		} catch (Exception ex) {
+			LoggerUtil.getLogger().error(ex.getMessage());
+		}
+		return result;
 	}
 }
