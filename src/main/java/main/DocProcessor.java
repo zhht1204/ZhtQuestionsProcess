@@ -17,7 +17,7 @@ public class DocProcessor {
 	public List<SelectQuestionsEntity> processSelectQuestions(File inputFile) {
 		List<SelectQuestionsEntity> resultList = new ArrayList<SelectQuestionsEntity>();
 
-		Pattern questionLinePattern = Pattern.compile("\\d{1,3}．([^（]+)（(\\w){1,4}）", Pattern.DOTALL);
+		Pattern questionLinePattern = Pattern.compile("\\d{1,3}．(.+)（(\\w){1,4}）(.*)", Pattern.DOTALL);
 		Pattern idPattern = Pattern.compile("\\d{1,3}");
 		Pattern questionPattern = Pattern.compile("．([^（]+)");
 		Pattern answerPattern = Pattern.compile("（[A-Z]{1,4}）");
@@ -30,6 +30,7 @@ public class DocProcessor {
 			SelectQuestionsEntity temp;
 			String answer;
 			for (line = br.readLine(); line != null; line = br.readLine()) {
+				line.replaceAll("\\t", " ");
 				if (questionLinePattern.matcher(line).matches()) {
 					temp = new SelectQuestionsEntity();
 					Matcher matcher;
@@ -48,15 +49,15 @@ public class DocProcessor {
 					selection = new StringBuilder();
 					line = br.readLine();
 					if ((matcher = selectionPattern.matcher(line)).find()) {
-						selection.append(matcher.group().substring(1) + "；");
+						selection.append(matcher.group().substring(1) + "|");
 					}
 					line = br.readLine();
 					if ((matcher = selectionPattern.matcher(line)).find()) {
-						selection.append(matcher.group().substring(1) + "；");
+						selection.append(matcher.group().substring(1) + "|");
 					}
 					line = br.readLine();
 					if ((matcher = selectionPattern.matcher(line)).find()) {
-						selection.append(matcher.group().substring(1) + "；");
+						selection.append(matcher.group().substring(1) + "|");
 					}
 					line = br.readLine();
 					if ((matcher = selectionPattern.matcher(line)).find()) {
@@ -79,10 +80,10 @@ public class DocProcessor {
 	public List<JudgeQuestionsEntity> processJudgeQuestions(File inputFile) {
 		List<JudgeQuestionsEntity> resultList = new ArrayList<JudgeQuestionsEntity>();
 
-		Pattern questionLinePattern = Pattern.compile("\\d{1,3}．([^（]+)（\\W{1}）", Pattern.DOTALL);
+		Pattern questionLinePattern = Pattern.compile("\\d{1,3}．(.+)（\\W）(.*)", Pattern.DOTALL);
 		Pattern idPattern = Pattern.compile("\\d{1,3}");
 		Pattern questionPattern = Pattern.compile("．([^（]+)");
-		Pattern answerPattern = Pattern.compile("（\\W{1}）");
+		Pattern answerPattern = Pattern.compile("（\\W）");
 		try {
 			FileReader fr = new FileReader(inputFile);
 			BufferedReader br = new BufferedReader(fr);
@@ -91,6 +92,7 @@ public class DocProcessor {
 			String answer;
 			Matcher matcher;
 			for (line = br.readLine(); line != null; line = br.readLine()) {
+				line.replaceAll("\\t", " ");
 				if (questionLinePattern.matcher(line).matches()) {
 					temp = new JudgeQuestionsEntity();
 					if ((matcher = idPattern.matcher(line)).find()) {
@@ -123,14 +125,20 @@ public class DocProcessor {
 		try {
 			fw = new FileWriter(outputFile);
 			bw = new BufferedWriter(fw);
+			String selectionsString;
+			String[] selections;
 			for (Object o : list) {
 				if (o instanceof SelectQuestionsEntity) {
 					bw.write(((SelectQuestionsEntity) o).getId() + "");
 					bw.write(separator);
 					bw.write(((SelectQuestionsEntity) o).getQuestion());
 					bw.write(separator);
-					bw.write(((SelectQuestionsEntity) o).getSelections());
-					bw.write(separator);
+					selectionsString = ((SelectQuestionsEntity) o).getSelections();
+					selections = selectionsString.split("\\|");
+					for (String s : selections) {
+						bw.write(s);
+						bw.write(separator);
+					}
 					bw.write(((SelectQuestionsEntity) o).getAnswer());
 					bw.write(separator);
 					bw.write(((SelectQuestionsEntity) o).getType() + "");
